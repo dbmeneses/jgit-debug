@@ -14,7 +14,7 @@ public class App {
     }
 
     String target = args[0];
-    Path path = Paths.get("");
+    Path path = Paths.get("").toAbsolutePath();
     System.out.println("Current path " + path);
     GitScmProvider provider = new GitScmProvider();
 

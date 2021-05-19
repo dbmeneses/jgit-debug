@@ -1,10 +1,9 @@
 plugins {
-    // Apply the application plugin to add support for building a CLI application in Java.
-    id 'application'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+    id 'java'
 }
 
 repositories {
-    // Use JCenter for resolving dependencies.
     jcenter()
 }
 
@@ -20,7 +19,8 @@ dependencies {
 
 }
 
-application {
-    // Define the main class for the application.
-    mainClass = 'org.sonarsource.jgit.debug.App'
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.sonarsource.jgit.debug.App'
+    }
 }
