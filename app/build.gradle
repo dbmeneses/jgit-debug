@@ -1,0 +1,26 @@
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+}
+
+repositories {
+    // Use JCenter for resolving dependencies.
+    jcenter()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'org.eclipse.jgit:org.eclipse.jgit:5.9.0.202009080501-r'
+
+    // Use JUnit test framework.
+    testImplementation 'junit:junit:4.13'
+
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'org.sonarsource.jgit.debug.App'
+}
